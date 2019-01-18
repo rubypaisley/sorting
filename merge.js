@@ -7,19 +7,15 @@ function split(wholeArray) {
 
   function merge(left, right) {
       let newArr = [];
-      while (left.length > 0 && right.length > 0){
+      while (left.length && right.length){
         if (left[0] < right[0]){
-            newArr.push(left.shift);
+            newArr.push(left.shift());
         } else {
-            newArr.push(right.shift);
+            newArr.push(right.shift());
         }
       }
-      if (right.length){
-          newArr.concat(right);
-      } else if (left.length){
-          newArr.concat(left);
-      }
-      return newArr;
+      
+      return [...newArr, ...left, ...right];
   }
 
   function mergeSort(arr){

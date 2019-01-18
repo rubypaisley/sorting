@@ -13,6 +13,6 @@ describe('Split Array function', function() {
   });
   describe('Merge Sort function', function(){
     it('is able to sort an array', function(){
-        expect( merge([1, 4, 5, 2, 3]) ).toEqual( [1, 2, 3, 4, 5] );
-    })
+        expect( mergeSort([1, 4, 5, 2, 3]) ).toEqual( [1, 2, 3, 4, 5] );
+    });
   });
